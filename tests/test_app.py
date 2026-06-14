@@ -18,6 +18,7 @@ def test_unregister_participant_removes_email_from_activity():
     assert email not in activities[activity_name]["participants"]
     assert response.json()["message"] == f"Removed {email} from {activity_name}"
 
+#prova
 
 def test_unregister_participant_returns_404_for_unknown_activity():
     response = client.delete("/activities/Unknown Activity/participants/student@example.edu")
